@@ -1,5 +1,5 @@
 # jobnotif
-Quick and dirty python script that uses beautifulsoup scrape a url and send an email through smtp if a job matching a substring is found.
+Quick and dirty python script that uses beautifulsoup to scrape a url and send an email through smtp if a job matching a substring is found.
 Wanted to keep track of Twitch's internship opportunities but no option to automatically email and the recruiters don't seem to want to respond to me :'(.
 Keeps track of duplicate jobs with a set stored using pickle.
 
@@ -24,6 +24,7 @@ optional arguments:
   -h, --help  show this help message and exit
   --t         testing flag
   
+## important
 Create a config.py file with the variables:
 username
 password
