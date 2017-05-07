@@ -7,7 +7,9 @@ Keeps track of duplicate jobs with a set stored using pickle.
 
 # Requirements
 requests package
+
 beautifulsoup4 package
+
 python 3.x (tested for 3.5+ only)
 
 # Usage
@@ -26,8 +28,14 @@ optional arguments:
 
 ### Important
 Create a config.py file with the variables:
-username
-password
-emailname
-host
-port
+
+username - smtp login username
+
+password - smtp login password
+
+emailname - target email to send to
+
+host - host server
+
+port - desired port
+
