@@ -17,19 +17,17 @@ Set up with a cron job of your choice, I personally have mines run twice a day.
 
 From the program's -h argument
 
+~~~~
 usage: scrapesite.py [-h] [--t] substr siteurl
 
 positional arguments:
-
   substr      substr to look for
-  
   siteurl     url of site to scrape
 
 optional arguments:
-
-  -h, --help  show this help message and exit
-  
+  -h, --help  show this help message and exit  
   --t         testing flag
+~~~~
 
 ### Important
 Create a config.py file with the variables:
