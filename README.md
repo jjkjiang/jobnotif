@@ -16,6 +16,7 @@ python 3.x (tested for 3.5+ only)
 Set up with a cron job of your choice, I personally have mines run twice a day.
 
 From the program's -h argument
+
 usage: scrapesite.py [-h] [--t] substr siteurl
 
 positional arguments:
