@@ -5,12 +5,12 @@ Keeps track of duplicate jobs with a set stored using pickle.
 
 (probably doesn't work for many sites generically, designed for twitch's job site specifically, but feel free to try, probably don't need to change much to make it work)
 
-#requirements
+# requirements
 requests package
 beautifulsoup4 package
 python 3.x (tested for 3.5+ only)
 
-#usage
+# usage
 Set up with a cron job of your choice, I personally have mines run twice a day.
 
 From the program's -h argument
