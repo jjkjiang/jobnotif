@@ -49,3 +49,10 @@ host - host server
 
 port - desired port
 
+The following are only needed if you want to use the lambda part of the code
+
+bucketname - amazon s3 bucket name used
+
+accesskey - aws access key
+
+secretkey - aws secret access key
