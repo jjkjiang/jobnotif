@@ -3,13 +3,11 @@ import sys
 
 
 class BaseParser(object):
-    def __init__(self, *args):
-        try:
-            self.bsoup = args.bsoup
-            self.senturls = args.senturls
-        except:
-            print("unable to initialize properly")
-            sys.exit(-1)
+    def __init__(self, bsoup, senturls, substr, t):
+        self.bsoup = bsoup
+        self.senturls = senturls
+        self.substr = substr
+        self.t = t
 
     @abc.abstractmethod
     def parse(self):

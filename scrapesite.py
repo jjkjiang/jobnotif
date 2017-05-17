@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from parserfactory import ParserFactory
 import requests
 import argparse
 import config
@@ -10,6 +11,7 @@ import smtplib
 parser = argparse.ArgumentParser()
 parser.add_argument("substr", help="substr to look for")
 parser.add_argument("siteurl", help="url of site to scrape")
+parser.add_argument("parsername", help="name of a parser to use")
 parser.add_argument("--t", help="testing flag", action="store_true")
 args = parser.parse_args()
 
@@ -18,7 +20,11 @@ if args.t:
 
 
 url = args.siteurl
-r = requests.get("https://"+url)
+
+if "https://" not in url:
+    url = "https://" + url
+
+r = requests.get(url)
 data = r.text
 soup = BeautifulSoup(data, "html.parser")
 msg = ''
@@ -32,19 +38,10 @@ except FileNotFoundError:
         print('FileNotFoundError caught')
     senturls = set()
 
-#look through all h5 tags, determine validity
-#this is the part to modify if you want to make this work for not twitch
-for i in soup.find_all("h5"):
-    if args.substr.lower() in i.string.lower():
-        jobname = i.string
-        p = i.find_parent("a")
-        if args.t:
-            print(p)
-        joblink = p.get('href')
+factory = ParserFactory()
+p = factory.build(args.parsername, soup, senturls, args.substr, args.t)
 
-        if joblink not in senturls:
-            senturls.add(joblink)
-            msg += jobname + '\n' + joblink + '\n'
+msg = p.parse()
 
 #dump back into pickle file
 with open('senturls' + args.substr + '.pickle', 'wb') as handle:
