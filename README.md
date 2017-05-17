@@ -1,7 +1,7 @@
 # jobnotif
-Quick and dirty python script that uses beautifulsoup to scrape a url and send an email through smtp if a job matching a substring is found.
-~~Wanted to keep track of Twitch's internship opportunities but no option to automatically email is available.
-Keeps track of duplicate jobs with a set stored using pickle.~~
+Quick and dirty python script that uses beautifulsoup to scrape a url and send an email through smtp if a job matching a substring is found. Keeps track of duplicate jobs with a set stored using pickle.
+
+~~I wanted to keep track of Twitch's internship opportunities but no option to automatically email is available. So what better way to solve it than programmatically~~
 Made this slightly more generic, to add a new parser write a concrete implementation of the BaseParser class, and put a clause in the parser_factory class to construct it. Still only has Twitch available, but in theory actually works for any lever.co type of job page.
 
 Output email is in the form of:
