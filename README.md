@@ -63,3 +63,5 @@ python scrape_site.py intern https://jobs.lever.co/twitch twitchparser
 -Create implementation that can integrate easily with amazon s3 and lambda
 
 -Test on some other jobs.lever.co pages before renaming from twitch to lever parser
+
+-Take in a list of keywords to look for (all must be present)
