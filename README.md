@@ -53,7 +53,7 @@ port - desired port
 
 # Example
 ~~~
-python scrapesite.py intern https://jobs.lever.co/twitch twitchparser
+python scrape_site.py intern https://jobs.lever.co/twitch twitchparser
 ~~~
 
 # TODO:
@@ -61,3 +61,5 @@ python scrapesite.py intern https://jobs.lever.co/twitch twitchparser
 -Find a better alternative to doing if statements for the factory
 
 -Create implementation that can integrate easily with amazon s3 and lambda
+
+-Test on some other jobs.lever.co pages before renaming from twitch to lever parser
