@@ -51,6 +51,11 @@ host - host server
 
 port - desired port
 
+# Example
+~~~
+python scrapesite.py intern https://jobs.lever.co/twitch twitchparser
+~~~
+
 # TODO:
 
 -Find a better alternative to doing if statements for the factory
